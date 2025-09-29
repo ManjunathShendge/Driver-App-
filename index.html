@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Run Your Brain - Professional Drivers on Demand</title>
+    <title>Hire Driver - Professional Drivers on Demand</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="header" id="header">
         <nav class="nav container">
             <div class="nav-logo">
                 <i class="fas fa-car-side"></i>
-                <span>Run Your Brain</span>
+                <span> Hire Driver</span>
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
@@ -35,8 +37,10 @@
         <div class="hero-content container">
             <div class="hero-text">
                 <h1 class="hero-title">Hire Professional Drivers Anytime, Anywhere</h1>
-                <p class="hero-subtitle">Your trusted driver is just a click away. Reliable, trained professionals for all your driving needs.</p>
-                <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                <p class="hero-subtitle">Your trusted driver is just a click away. Reliable, trained professionals for
+                    all your driving needs.</p>
+                <button class="cta-button"
+                    onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
                     Book a Driver
                     <i class="fas fa-arrow-right"></i>
                 </button>
@@ -158,7 +162,8 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p>"Exceptional service! The driver was punctual, professional, and made my business meeting stress-free."</p>
+                    <p>"Exceptional service! The driver was punctual, professional, and made my business meeting
+                        stress-free."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
                             <i class="fas fa-user"></i>
@@ -177,7 +182,8 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p>"I needed a driver for a full day event. The service was reliable and the driver was courteous throughout."</p>
+                    <p>"I needed a driver for a full day event. The service was reliable and the driver was courteous
+                        throughout."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
                             <i class="fas fa-user"></i>
@@ -196,7 +202,8 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p>"Great value for money! The booking process was simple and the driver exceeded my expectations."</p>
+                    <p>"Great value for money! The booking process was simple and the driver exceeded my expectations."
+                    </p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
                             <i class="fas fa-user"></i>
@@ -277,20 +284,33 @@
     <section class="section contact" id="contact">
         <div class="container">
             <h2 class="section-title">Book Your Driver</h2>
-            <p class="section-subtitle">Fill out the form below and we'll get back to you within minutes</p>
+            <p class="section-subtitle">
+                Fill out the form below and we'll get back to you within minutes
+            </p>
+
             <form class="contact-form fade-in" id="booking-form">
+                <!-- Customer Info -->
                 <div class="form-group">
                     <input type="text" id="name" name="name" placeholder="Your Full Name" required>
                     <span class="error-message" id="name-error"></span>
                 </div>
+
                 <div class="form-group">
                     <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
                     <span class="error-message" id="phone-error"></span>
                 </div>
+
                 <div class="form-group">
-                    <input type="text" id="location" name="location" placeholder="Pickup Location" required>
-                    <span class="error-message" id="location-error"></span>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    <span class="error-message" id="email-error"></span>
                 </div>
+
+                <!-- Booking Details -->
+                <div class="form-group">
+                    <input type="text" id="pickup" name="pickup" placeholder="Pickup Address" required>
+                    <span class="error-message" id="pickup-error"></span>
+                </div>
+
                 <div class="form-row">
                     <div class="form-group">
                         <input type="date" id="date" name="date" required>
@@ -301,6 +321,7 @@
                         <span class="error-message" id="time-error"></span>
                     </div>
                 </div>
+
                 <div class="form-group">
                     <select id="duration" name="duration" required>
                         <option value="">Select Duration</option>
@@ -311,16 +332,47 @@
                     </select>
                     <span class="error-message" id="duration-error"></span>
                 </div>
+
                 <div class="form-group">
-                    <textarea id="message" name="message" placeholder="Additional requirements or notes (optional)" rows="4"></textarea>
+                    <select id="service-type" name="service-type" required>
+                        <option value="">Select Service Type</option>
+                        <option value="within-city">Within City</option>
+                        <option value="outstation">Outstation Trip</option>
+                        <option value="daily">Daily/Weekly Hire</option>
+                        <option value="airport">Airport Pickup/Drop</option>
+                    </select>
+                    <span class="error-message" id="service-type-error"></span>
                 </div>
-                <button type="submit" class="submit-button">
+
+                <!-- Car Details -->
+                <div class="form-group">
+                    <input type="text" id="car-make" name="car-make" placeholder="Car Make & Model" required>
+                    <span class="error-message" id="car-make-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <select id="transmission" name="transmission" required>
+                        <option value="">Transmission Type</option>
+                        <option value="manual">Manual</option>
+                        <option value="automatic">Automatic</option>
+                    </select>
+                    <span class="error-message" id="transmission-error"></span>
+                </div>
+
+                <!-- Additional Notes -->
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Additional requirements or notes (optional)"
+                        rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="submit-button" id="booking-form">
                     Submit Booking Request
                     <i class="fas fa-paper-plane"></i>
                 </button>
             </form>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -416,12 +468,12 @@
     <!-- Floating Action Buttons -->
     <div class="floating-buttons">
         <!-- WhatsApp Button -->
-        <a href="https://wa.me/1234567890?text=Hi! I'm interested in booking a professional driver." 
-           class="whatsapp-float" target="_blank" rel="noopener">
+        <a href="https://wa.me/1234567890?text=Hi! I'm interested in booking a professional driver."
+            class="whatsapp-float" target="_blank" rel="noopener">
             <i class="fab fa-whatsapp"></i>
             <span class="tooltip">Chat on WhatsApp</span>
         </a>
-        
+
         <!-- Chatbot Toggle Button -->
         <button class="chatbot-toggle" id="chatbot-toggle">
             <i class="fas fa-comments"></i>
@@ -429,7 +481,33 @@
             <span class="notification-badge" id="chat-badge">1</span>
         </button>
     </div>
+ <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("booking-form");
+            const scriptURL = "YOUR_GOOGLE_SCRIPT_URL_HERE"; // replace with your Web App URL
 
+            form.addEventListener("submit", e => {
+                e.preventDefault();
+
+                const formData = new FormData(form);
+                const params = new URLSearchParams(formData).toString();
+
+                fetch(scriptURL + "?" + params, { method: "GET" })
+                    .then(() => {
+                        alert("Booking submitted successfully!");
+                        form.reset();
+                    })
+                    .catch(err => {
+                        alert("Error submitting booking. Please try again.");
+                        console.error("Error!", err);
+                    });
+            });
+        });
+    </script>
     <script src="script.js"></script>
+   
+
+
 </body>
+
 </html>
